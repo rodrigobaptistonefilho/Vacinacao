@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      mlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Menu</title>
+    </h:head>
+    <h:body> 
+        <h1>Menu</h1>
+        <fieldset>
+            <legend align="center">Menu</legend>
+            <ul>
+            <li><h:link outcome="/cadAnimal" value="Cadastro de animais"/></li>
+            <li><h:link outcome="/exibirAnimal" value="Exibição de animais"/></li>
+            <li><h:link outcome="exAnimal" value="Exclusão de animais"/></li>
+            <li><h:link outcome="/busAnimal" value="Busca de animal"/></li>
+            <li><h:link outcome="" value="Cadastro de vacina"/></li>
+            </ul>
+        </fieldset>
+    </h:body>
+</html>

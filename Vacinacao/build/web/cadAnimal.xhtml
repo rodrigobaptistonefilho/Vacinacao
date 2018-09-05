@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Tela de cadastro</title>
+    </h:head>
+    <h:body> 
+        <p:outputPanel >
+            <h:form>
+                <h:outputLabel value="Raça: "/>
+                <p:inputText  value="#{novoAnimal.animal.raca}" required="true" requiredMessage="Nome obrigatório" >
+                </p:inputText> 
+                <br/>
+                <h:outputLabel value="Peso: "/>
+                <p:inputText  value="#{novoAnimal.animal.peso}" required="true" requiredMessage="Peso obrigatório" > </p:inputText>  
+                <br/>
+                <p:commandButton value="OK" icon="ui-icon-check" ajax="false"
+                                 action="#{novoAnimal.cadastrar()}" styleClass="ui-state-hover"/> 
+                <br/>
+                <p:messages showIcon="false" closable="true" />
+            </h:form>
+        </p:outputPanel>
+    </h:body>
+</html>
