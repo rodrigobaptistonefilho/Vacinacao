@@ -15,7 +15,7 @@ import usuario.Administrador;
 public class NovoAdm implements Serializable 
 {
     private Administrador usuario;
-    private Dao<Administrador> dao;  
+    private Dao<Administrador> dao; 
     
     public NovoAdm()
     {
@@ -40,7 +40,7 @@ public class NovoAdm implements Serializable
         session.setAttribute("usuarioLogado", temp);
         return "/menu";
     }   
-
+    
     public Administrador getUsuario() {
         return usuario;
     }

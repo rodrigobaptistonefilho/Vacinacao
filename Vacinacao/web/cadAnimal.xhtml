@@ -16,7 +16,11 @@
                 </p:inputText> 
                 <br/>
                 <h:outputLabel value="Peso: "/>
-                <p:inputText  value="#{novoAnimal.animal.peso}" required="true" requiredMessage="Peso obrigatório" > </p:inputText>  
+                <p:inputText  value="#{novoAnimal.animal.peso}" required="true" requiredMessage="Peso obrigatório" > 
+                </p:inputText>  
+                <br/>
+                <h:outputLabel value="Vacina: "/>
+                <p:inputText  value="#{novoAnimal.animal.vacina}" required="true" requiredMessage="Vacina obrigatório" > </p:inputText>  
                 <br/>
                 <p:commandButton value="OK" icon="ui-icon-check" ajax="false"
                                  action="#{novoAnimal.cadastrar()}" styleClass="ui-state-hover"/> 

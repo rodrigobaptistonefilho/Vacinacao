@@ -61,7 +61,7 @@ public class DaoTest {
     public void testExcluirA() 
     {
        Dao<Animal> gerenciador = new Dao(Animal.class);
-       gerenciador.excluir(1);
+       gerenciador.excluir(10);
     }*/
     
     /*@Test
@@ -74,12 +74,10 @@ public class DaoTest {
     }*/
     
     @Test
-    public void testConsultar() 
+    public void testListar() 
     {
-       Dao<Animal> gerenciador = new Dao(Animal.class);
-       Animal teste = new Animal();
-       teste = gerenciador.buscarAnimal(2);
-       System.out.println(teste.toString());
+       Dao<Animal> animal = new Dao(Animal.class);
+       List<Animal> teste = animal.listarTodos();
+       System.out.println(teste);
     }
-   
 }

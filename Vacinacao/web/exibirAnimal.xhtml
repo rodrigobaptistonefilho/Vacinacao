@@ -1,16 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <f:view contentType="text/html"/>
+    <h:head>
+        <title>Tela de exibição</title>
+    </h:head>
+    <h:body> 
+        <h1 style="text-align: center;"></h1>
+        <br/>
+        <p:dataTable resizableColumns="true" tableStyle="width:auto" emptyMessage="Nenhum animal cadastrado"
+                             var="animal" value="#{novoAnimal.lista}">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{animal.id}"/>
+                    </p:column>
+
+                    <p:column headerText="Raça">
+                        <h:outputText value="#{animal.raca}"/>
+                    </p:column>
+            
+                    <p:column headerText="Peso">
+                        <h:outputText value="#{animal.peso}"/>
+                    </p:column>
+            
+                    <p:column headerText="Vacina">
+                        <h:outputText value="#{animal.vacina}"/>
+                    </p:column>
+                    
+                </p:dataTable>
+    </h:body>
 </html>

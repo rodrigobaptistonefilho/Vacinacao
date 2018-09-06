@@ -18,24 +18,28 @@ public class Animal implements Serializable
     private String raca;
     @Column
     private float peso;
+    @Column(length = 50)
+    private String vacina;
     
     public Animal()
     {
         id=0;
         raca = "";
         peso = 0.0f;
+        vacina = "";
     }
 
-    public Animal(String raca, float peso) {
+    public Animal(String raca, float peso, String vacina) {
         this.raca = raca;
         this.peso = peso;
+        this.vacina = vacina;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 19 * hash + Objects.hashCode(this.id);
-        hash = 19 * hash + Objects.hashCode(this.raca);
+        hash = 89 * hash + Objects.hashCode(this.id);
+        hash = 89 * hash + Objects.hashCode(this.raca);
         return hash;
     }
 
@@ -57,6 +61,9 @@ public class Animal implements Serializable
         if (!Objects.equals(this.raca, other.raca)) {
             return false;
         }
+        if (!Objects.equals(this.vacina, other.vacina)) {
+            return false;
+        }
         if (!Objects.equals(this.id, other.id)) {
             return false;
         }
@@ -65,7 +72,7 @@ public class Animal implements Serializable
 
     @Override
     public String toString() {
-        return "Animal{" + "id=" + id + ", raca=" + raca + ",peso=" + peso + '}';
+        return "Animal{" + "id=" + id + ", raca=" + raca + ",peso=" + peso + " Vacina: " + vacina + '}';
     }
 
     public Integer getId() {
@@ -90,5 +97,13 @@ public class Animal implements Serializable
 
     public void setPeso(float peso) {
         this.peso = peso;
+    }
+
+    public String getVacina() {
+        return vacina;
+    }
+
+    public void setVacina(String vacina) {
+        this.vacina = vacina;
     }
 }
