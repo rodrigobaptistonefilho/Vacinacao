@@ -39,7 +39,14 @@ public class NovoAdm implements Serializable
         HttpSession session = (HttpSession) ectx.getSession(true);
         session.setAttribute("usuarioLogado", temp);
         return "/menu";
-    }   
+    }  
+    public void deslogar()
+    {
+        FacesContext context = FacesContext.getCurrentInstance();
+        ExternalContext ectx = context.getExternalContext();
+        HttpSession session = (HttpSession) ectx.getSession(false);
+        session.setAttribute("usuarioLogado", null);
+    }
     
     public Administrador getUsuario() {
         return usuario;

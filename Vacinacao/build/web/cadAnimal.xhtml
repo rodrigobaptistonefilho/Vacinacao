@@ -11,7 +11,7 @@
     <h:body> 
         <p:outputPanel >
             <h:form>
-                <h:outputLabel value="Raça: "/>
+                <h:outputLabel value="Nome: "/>
                 <p:inputText  value="#{novoAnimal.animal.raca}" required="true" requiredMessage="Nome obrigatório" >
                 </p:inputText> 
                 <br/>
@@ -28,5 +28,6 @@
                 <p:messages showIcon="false" closable="true" />
             </h:form>
         </p:outputPanel>
+        <button onclick="history.back()">voltar</button>
     </h:body>
 </html>

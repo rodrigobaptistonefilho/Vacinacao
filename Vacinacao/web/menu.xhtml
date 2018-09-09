@@ -20,5 +20,8 @@
             <li><h:link outcome="/busAnimal" value="Busca de animal"/></li>
             </ul>
         </fieldset>
+        <h:form>
+             <p:commandButton value="Sair" action="#{novoAdm.deslogar()}" update="@form"/>
+        </h:form>
     </h:body>
 </html>
